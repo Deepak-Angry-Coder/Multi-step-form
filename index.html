@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Multi Step Form</title>
+  </head>
+  <body>
+    <main>
+      <img src="./images/bg-sidebar-mobile.svg" alt="" class="bg_image" />
+
+      <div class="mob_btn">
+        <a href="" class="back_link">Go Back</a>
+        <button type="button" onclick="submitForm()" class="mob_next_btn">
+          Next Step
+        </button>
+      </div>
+
+      <div class="main_wrapper" id="main_wrapper">
+        <div class="wrapper" id="wrapper1">
+          <div class="left_sec">
+            <div class="step_sec">
+              <div class="card">
+                <p class="count" id="count1">1</p>
+                <div class="info">
+                  <p>STEP 1</p>
+                  <p>YOUR INFO</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <p class="count">2</p>
+                <div class="info">
+                  <p>STEP 2</p>
+                  <p>SELECT PLAN</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <p class="count">3</p>
+                <div class="info">
+                  <p>STEP 3</p>
+                  <p>ADD-ONS</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <p class="count">4</p>
+                <div class="info">
+                  <p>STEP 4</p>
+                  <p>SUMMARY</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right_section -->
+          <div class="right_sec">
+            <!-- first sec -->
+            <div class="first_sec">
+              <div class="para">
+                <p>Personal info</p>
+                <p>
+                  Please provide your name, email address, and phone number.
+                </p>
+              </div>
+              <form action="">
+                <span
+                  ><label for="name">Name</label>
+                  <p class="require" id="name_err"></p
+                ></span>
+
+                <input type="text" placeholder="e.g. Stephen King" id="name" />
+                <span
+                  ><label for="email">Email Address</label>
+                  <p class="require" id="email_err"></p
+                ></span>
+
+                <input
+                  type="email"
+                  placeholder="e.g.stephenking@lorem.com"
+                  id="email"
+                />
+                <span>
+                  <label for="phone">Phone Number</label>
+                  <p class="require" id="phone_err"></p>
+                </span>
+
+                <input
+                  type="text"
+                  placeholder="e.g.+1 234 567 890"
+                  id="phone"
+                />
+              </form>
+              <button
+                type="button"
+                onclick="FirstSubmitForm()"
+                class="next_btn"
+              >
+                Next Step
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- second section -->
+
+        <div class="wrapper" id="wrapper2">
+          <div class="left_sec">
+            <div class="step_sec">
+              <div class="card">
+                <p class="count">1</p>
+                <div class="info">
+                  <p>STEP 1</p>
+                  <p>YOUR INFO</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <p class="count" id="count2">2</p>
+                <div class="info">
+                  <p>STEP 2</p>
+                  <p>SELECT PLAN</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <p class="count">3</p>
+                <div class="info">
+                  <p>STEP 3</p>
+                  <p>ADD-ONS</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <p class="count">4</p>
+                <div class="info">
+                  <p>STEP 4</p>
+                  <p>SUMMARY</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="right_sec">
+            <div class="second_sec">
+              <div class="para">
+                <p>Select your plan</p>
+                <p>You have the option of monthly or yearly billing.</p>
+              </div>
+              <div class="option_sec" id="option">
+                <div class="game_card active">
+                  <img src="./images/icon-arcade.svg" alt="icon load failed" />
+                  <div class="sec_para">
+                    <p>Arcade</p>
+                    <p class="amt amt1">$9/mo</p>
+                    <p class="free"></p>
+                  </div>
+                </div>
+                <div class="game_card">
+                  <img
+                    src="./images/icon-advanced.svg"
+                    alt="icon load failed"
+                  />
+                  <div class="sec_para">
+                    <p>Advanced</p>
+                    <p class="amt amt2">$12/mo</p>
+                    <p class="free"></p>
+                  </div>
+                </div>
+                <div class="game_card">
+                  <img src="./images/icon-pro.svg" alt="icon load failed" />
+                  <div class="sec_para">
+                    <p>Pro</p>
+                    <p class="amt amt3">$15/mo</p>
+                    <p class="free"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="mon_year">
+                <span
+                  ><p>Monthly</p>
+                  <input
+                    type="checkbox"
+                    name="yearly"
+                    id="check"
+                    class="theme-checkbox"
+                  />
+                  <p>Yearly</p></span
+                >
+              </div>
+              <div class="btn_sec">
+                <a href="" class="back_link">Go Back</a>
+                <button type="button" onclick="next()" class="mob_next_btn">
+                  Next Step
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Third Section -->
+
+        <div class="wrapper" id="wrapper3">
+          <div class="left_sec">
+            <div class="step_sec">
+              <div class="card">
+                <p class="count">1</p>
+                <div class="info">
+                  <p>STEP 1</p>
+                  <p>YOUR INFO</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <p class="count">2</p>
+                <div class="info">
+                  <p>STEP 2</p>
+                  <p>SELECT PLAN</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <p class="count" id="count3">3</p>
+                <div class="info">
+                  <p>STEP 3</p>
+                  <p>ADD-ONS</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <p class="count">4</p>
+                <div class="info">
+                  <p>STEP 4</p>
+                  <p>SUMMARY</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right_sec">
+            <div class="third_sec">
+              <div class="para">
+                <p>Pick add-ons</p>
+                <p>Add-ons help enhance your gaming experience.</p>
+              </div>
+              <div class="service_sec">
+                <div class="ser_card active_add">
+                  <input type="checkbox" name="checkbox" class="service" />
+                  <div class="ser_title">
+                    <p>Online service</p>
+                    <p>Access to multiplayer games</p>
+                  </div>
+                  <p class="">+$1/mo</p>
+                </div>
+                <div class="ser_card">
+                  <input type="checkbox" name="checkbox" class="service" />
+                  <div class="ser_title">
+                    <p>Larger storage</p>
+                    <p>Extra 1TB of cloud save</p>
+                  </div>
+                  <p>+$2/mo</p>
+                </div>
+                <div class="ser_card">
+                  <input type="checkbox" name="checkbox" class="service" />
+                  <div class="ser_title">
+                    <p>Customizable Profile</p>
+                    <p>Custom theme on your profile</p>
+                  </div>
+                  <p>+$2/mo</p>
+                </div>
+              </div>
+              <div class="btn_sec">
+                <a href="" class="back_link">Go Back</a>
+                <button
+                  type="button"
+                  onclick="submitForm()"
+                  class="mob_next_btn"
+                >
+                  Next Step
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrapper" id="wrapper4">
+          <div class="left_sec">
+            <div class="step_sec">
+              <div class="card">
+                <p class="count">1</p>
+                <div class="info">
+                  <p>STEP 1</p>
+                  <p>YOUR INFO</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <p class="count">2</p>
+                <div class="info">
+                  <p>STEP 2</p>
+                  <p>SELECT PLAN</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <p class="count">3</p>
+                <div class="info">
+                  <p>STEP 3</p>
+                  <p>ADD-ONS</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <p class="count" id="count4">4</p>
+                <div class="info">
+                  <p>STEP 4</p>
+                  <p>SUMMARY</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right_sec">
+            <!-- fourth section -->
+            <div class="forth_sec">
+              <div class="para">
+                <p>Finishing up</p>
+                <p>Double-check everything looks OK confirming.</p>
+              </div>
+              <div class="finish_card">
+                <div class="content_heading">
+                  <div class="plan">
+                    <p>Arcade(Monthly)</p>
+                    <a href="#">Change</a>
+                  </div>
+                  <p>$9/mo</p>
+                </div>
+                <hr class="hr_line" />
+                <div class="additional">
+                  <div class="other">
+                    <p>Online service</p>
+                    <p>+$1/mo</p>
+                  </div>
+                  <div class="other">
+                    <p>Larger Storage</p>
+                    <p>+$2/mo</p>
+                  </div>
+                </div>
+              </div>
+              <div class="total_">
+                <p>Total(per month)</p>
+                <p>+$12/mo</p>
+              </div>
+              <div class="btn_sec">
+                <a href="" class="back_link">Go Back</a>
+                <button
+                  type="button"
+                  onclick="lastSubmitForm()"
+                  class="mob_next_btn"
+                >
+                  Next Step
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Final Submitted -->
+        <div class="wrapper" id="wrapper5">
+          <div class="left_sec">
+            <div class="step_sec">
+              <div class="card">
+                <p class="count">1</p>
+                <div class="info">
+                  <p>STEP 1</p>
+                  <p>YOUR INFO</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <p class="count">2</p>
+                <div class="info">
+                  <p>STEP 2</p>
+                  <p>SELECT PLAN</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <p class="count">3</p>
+                <div class="info">
+                  <p>STEP 3</p>
+                  <p>ADD-ONS</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <p class="count" id="count5">4</p>
+                <div class="info">
+                  <p>STEP 4</p>
+                  <p>SUMMARY</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right_sec">
+            <div class="thank_page">
+              <img src="./images/icon-thank-you.svg" alt="icon load failed" />
+              <p>Thank you!</p>
+              <p>
+                Thanks for confirming your subscription! We hope you have fun
+                using our platform. If you ever need support, please feel free
+                to email us at support@loremgaming.com.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
